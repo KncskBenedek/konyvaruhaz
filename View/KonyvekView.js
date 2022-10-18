@@ -2,16 +2,16 @@ import KonyvView from "./KonyvView.js";
 
 class KonyvekView {
     constructor(tomb, szuloElem) {
-        szuloElem.append(`<table><tr>
-        <td>ID</td>
-        <td>Cím</td>
-        <td>Szerző</td>
-        <td>Ár</td>
-        </tr></table>`);
+        szuloElem.append(`<table><thead><tr>
+        <th>ID</th>
+        <th>Cím</th>
+        <th>Szerző</th>
+        <th>Ár</th>
+        </tr></thead><tbody></tbody></table>`);
         this.tabla = szuloElem.children("table:last-child");
-
+        this.tbodyelem = this.tabla.children("tbody") 
         tomb.forEach(konyv => {
-            const konyv = new KonyvView();
+            const konyvObj = new KonyvView(konyv,this.tbodyelem);
         });
     }
 }

@@ -1,14 +1,22 @@
 {
     "konyv":[
     {
+        "id" : "100",
         "cim":"Pál utcai fiúk",
         "szerzo":"Molnár Ferenc",
         "ar":1115
     },
     {
+        "id" : "101",
         "cim":"A programozás rejtelmei",
         "szerzo":"Gipsz Jakab",
         "ar":2000
+    },
+    {
+        "id" : "102",
+        "cim":"SQL felsőfokon",
+        "szerzo":"Celko",
+        "ar":4990
     }
     ]
 }

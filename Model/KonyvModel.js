@@ -2,8 +2,7 @@ class KonyvModel {
     #konyvekTomb = [];
 
     constructor() {
-        console.log("KonyvModel");
-    }
+     }
 
     adatBe(vegpont, myCallBack) {
         fetch(vegpont, {
@@ -14,14 +13,22 @@ class KonyvModel {
         })
             .then((response) => response.json())
             .then((data) => {
-                console.log('Success:', data);
                 this.#konyvekTomb = data.konyv;
-                console.log(this.#konyvekTomb);
                 myCallBack(this.#konyvekTomb);
             })
             .catch((error) => {
                 console.error('Error:', error);
             });
+    }
+    edit(adat){
+        console.log("editke " + adat);
+    }
+
+    del(adat){
+        console.log("el törölget " + adat);
+    }
+    buy(adat){
+        console.log("vásrolgat " + adat);
     }
 }
 
